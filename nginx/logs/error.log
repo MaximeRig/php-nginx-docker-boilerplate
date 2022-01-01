@@ -1,0 +1,1 @@
+2022/01/01 15:03:14 [error] 25#25: *1 open() "/usr/share/nginx/html/wxfwbx" failed (2: No such file or directory), client: 172.24.0.1, server: localhost, request: "GET /wxfwbx HTTP/1.1", host: "localhost:8080"
