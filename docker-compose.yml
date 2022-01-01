@@ -10,9 +10,11 @@ services:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./nginx/logs/error.log:/var/log/nginx/error.log
       - ./nginx/logs/access.log:/var/log/nginx/access.log
+    restart: always
+    links:
+      - php
 
-  web-php:
-    image: php:fpm-alpine
-    container_name: php
+  php:
+    image: php:8-fpm
     volumes:
-        - "./app:/script:ro"
+      - "./app:/script:ro"
